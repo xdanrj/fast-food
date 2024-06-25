@@ -1,0 +1,1 @@
+const darkBg = "#1B1B1B"

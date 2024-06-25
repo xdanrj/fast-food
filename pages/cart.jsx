@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Cart = () => {
+export default function Cart() {
   return (
-    <div>
-      <h1>Post do Cart</h1>
-      <p>Conteúdo do Cart.</p>
-    </div>
-  );
-};
-
-export default Cart;
+    <>
+      <div>
+        <h1>Post do Cart</h1>
+        <p>Conteúdo do Cart.</p>
+      </div>
+    </>
+  )
+}
