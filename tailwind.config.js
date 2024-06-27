@@ -8,7 +8,6 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   corePlugins: {
-    preflight: false,
  },
   theme: {
     extend: {},
@@ -25,3 +24,7 @@ export default {
     }),
   ],
 }
+
+// corePlugins: {
+//   preflight: false,
+// },
