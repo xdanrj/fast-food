@@ -1,4 +1,4 @@
-import { HomeIcon, CartIcon, GlassIcon } from "./icons";
+import { HomeIcon, CartIcon, GlassIcon } from "../icons";
 
 export default function BottomNavbar() {
   return (
@@ -6,19 +6,19 @@ export default function BottomNavbar() {
       <ul className="flex list-none justify-around my-2">
         <li >
           <a href="#" className="flex flex-col items-center">
-            <HomeIcon />
+            <HomeIcon className="size-6"/>
             <p>Início</p>
           </a>
         </li>
         <li >
           <a href="#" className="flex flex-col items-center">
-            <GlassIcon />
+            <GlassIcon className="size-6" />
             <p>Buscar</p>
           </a>
         </li>
         <li >
           <a href="#" className="flex flex-col items-center">
-            <CartIcon />
+            <CartIcon className="size-6"/>
             <p>Carrinho</p>
           </a>
         </li>
