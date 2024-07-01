@@ -1,6 +1,9 @@
-import { Accordion, AccordionItem } from "@nextui-org/react"
+import { Accordion, AccordionBody, AccordionHeader } from "@material-tailwind/react"
 import { ArrowLeft } from "../components/icons"
+import { useState } from "react"
 export default function History() {
+  const [open, setOpen] = useState()
+  const handleOpen = (value) => setOpen(open === value ? 0 : value)
   const OrderHistory = [
     { "name": "Hambúrguer de frango e cheddar", "quantity": 1, "price": 777.77, date: "24/06/2024" },
     { "name": "Sundae de chocolate com calda de morango", "quantity": 2, "price": 6.99, date: "11/06/2023" }
@@ -13,14 +16,19 @@ export default function History() {
         <p className="text-2xl mb-6">Histórico de compras</p>
       </div>
 
-<div className="flex justify-center">
+<div className="">
 
-<Accordion className="w-80" itemClasses={{title: "text-2xl bg-green-500 "}} variant="light">
     {OrderHistory.map((order, idx) => (
-      <AccordionItem classNames={{title: "flex justify-center text-2xl mx-auto"}} key={idx} title={order.date}>blableble</AccordionItem>
+      <Accordion open={open === 1} key={idx}>
+        <AccordionHeader onClick={()=> handleOpen(1)}>
+          {order.date}
+        </AccordionHeader>
+        <AccordionBody>
+          corpo bla bla
+        </AccordionBody>
+      </Accordion>
       
     ))}
-    </Accordion>
 
     </div>
     </div>
