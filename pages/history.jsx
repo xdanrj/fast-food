@@ -1,3 +1,4 @@
+import { Accordion, AccordionItem } from "@nextui-org/react"
 import { ArrowLeft } from "../components/icons"
 export default function History() {
   const OrderHistory = [
@@ -9,10 +10,17 @@ export default function History() {
     <div>
       <div className="m-2 flex relative justify-center">
         <ArrowLeft className="size-8 absolute left-0" />
-        <p className="text-2xl">Histórico de compras</p>
+        <p className="text-2xl mb-6">Histórico de compras</p>
       </div>
 
-<div ></div>
+<Accordion itemClasses={{title: "text-2xl"}} variant="splitted">
+
+    {OrderHistory.map((order, idx) => (
+      <AccordionItem key={idx} title={order.date}>blableble</AccordionItem>
+      
+    ))}
+    </Accordion>
+
     </div>
   )
 }
