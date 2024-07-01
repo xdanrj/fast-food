@@ -13,14 +13,16 @@ export default function History() {
         <p className="text-2xl mb-6">Histórico de compras</p>
       </div>
 
-<Accordion itemClasses={{title: "text-2xl"}} variant="splitted">
+<div className="flex justify-center">
 
+<Accordion className="w-80" itemClasses={{title: "text-2xl bg-green-500 "}} variant="light">
     {OrderHistory.map((order, idx) => (
-      <AccordionItem key={idx} title={order.date}>blableble</AccordionItem>
+      <AccordionItem classNames={{title: "flex justify-center text-2xl mx-auto"}} key={idx} title={order.date}>blableble</AccordionItem>
       
     ))}
     </Accordion>
 
+    </div>
     </div>
   )
 }
